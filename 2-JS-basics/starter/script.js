@@ -64,33 +64,62 @@
 //2. Create method for calculating BMI = mass / height^2
 //3. Log to console whoever has largest BMI, fullName,
 
-var john = {
-  fullName: "John Smith",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function() {
-     this.bmi = this.mass / (this.height * this.height);
-     return this.bmi;
-  }
-}
-var mark = {
-  fullName: "Mark Jones",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-}
+// var john = {
+//   fullName: "John Smith",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function() {
+//      this.bmi = this.mass / (this.height * this.height);
+//      return this.bmi;
+//   }
+// }
+// var mark = {
+//   fullName: "Mark Jones",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// }
+//
+// if (john.calcBMI() > mark.calcBMI()) {
+//   console.log( john.fullName + '\'s BMI ' + 'is greater than ' + mark.fullName + '\'s ' + john.bmi );
+// } else if (john.bmi < mark.bmi) {
+//   console.log( mark.fullName + '\'s BMI ' + 'is greater than ' + john.fullName + '\'s ' + mark.bmi );
+// } else {
+//   console.log("The BMI's are equal.");
+// }
 
-john.calcBMI();
-mark.calcBMI();
 
+//LOOPS
 
-if (john.bmi > mark.bmi) {
-  console.log( john.fullName + '\'s BMI ' + 'is greater than ' + mark.fullName + '\'s ' + john.bmi );
-} else if (john.bmi < mark.bmi) {
-  console.log( mark.fullName + '\'s BMI ' + 'is greater than ' + john.fullName + '\'s ' + mark.bmi );
-} else {
-  console.log("The BMI's are equal.");
+// for (i = 0; i <= 20; i+=2) {
+//   console.log(i);
+// }
+
+// var john = ['John', 'Smith', 1998, 'teacher', false, 'blue'];
+
+// for (var i = 0; i < john.length; i++) {
+//   console.log(john[i]);
+// }
+// var i = 0;
+// while(i < john.length) {
+//   console.log(john[i]);
+//   i++;
+// }
+
+var john = ['John', 'Smith', 1998, 'teacher', false, 'blue'];
+// for (i = 0; i<john.length; i++) {
+//   if (typeof john[i] !== 'string' ) continue;
+//   console.log(john[i]);
+// }
+//
+// for (i = 0; i<john.length; i++) {
+//   if (typeof john[i] !== 'string' ) break;
+//   console.log(john[i]);
+// }
+
+for (i = john.length-1; i >= 0; i--) {
+  console.log(john[i]);
 }
