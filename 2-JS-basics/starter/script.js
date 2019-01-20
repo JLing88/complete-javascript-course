@@ -36,23 +36,61 @@
 // Tip is 20% when under $50, 15% when over $50-$200, 10% when over $200
 // 2 arrays, one with the tip amounts, one with total bills
 
-var bills = [124, 48, 268];
+// var bills = [124, 48, 268];
+//
+// function tipCalculator(amount) {
+//   if (amount <= 50) {
+//     return amount * .20;
+//   } else if (amount > 50 && amount < 200) {
+//     return amount * .15;
+//   } else {
+//     return amount * .10;
+//   }
+// }
+//
+// var tips = [
+//             tipCalculator(bills[0]),
+//             tipCalculator(bills[1]),
+//             tipCalculator(bills[2])
+//           ];
+//
+// var totalBills = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]]
+// console.log(tips, totalBills);
 
-function tipCalculator(amount) {
-  if (amount <= 50) {
-    return amount * .20;
-  } else if (amount > 50 && amount < 200) {
-    return amount * .15;
-  } else {
-    return amount * .10;
+
+//CODE CHALLENGE OBJECTS
+
+//1. Create objects for Mark and John containing fullName, mass, height
+//2. Create method for calculating BMI = mass / height^2
+//3. Log to console whoever has largest BMI, fullName,
+
+var john = {
+  fullName: "John Smith",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function() {
+     this.bmi = this.mass / (this.height * this.height);
+     return this.bmi;
+  }
+}
+var mark = {
+  fullName: "Mark Jones",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   }
 }
 
-var tips = [
-            tipCalculator(bills[0]),
-            tipCalculator(bills[1]),
-            tipCalculator(bills[2])
-          ];
+john.calcBMI();
+mark.calcBMI();
 
-var totalBills = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]]
-console.log(tips, totalBills);
+
+if (john.bmi > mark.bmi) {
+  console.log( john.fullName + '\'s BMI ' + 'is greater than ' + mark.fullName + '\'s ' + john.bmi );
+} else if (john.bmi < mark.bmi) {
+  console.log( mark.fullName + '\'s BMI ' + 'is greater than ' + john.fullName + '\'s ' + mark.bmi );
+} else {
+  console.log("The BMI's are equal.");
+}
