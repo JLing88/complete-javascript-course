@@ -109,7 +109,7 @@
 //   i++;
 // }
 
-var john = ['John', 'Smith', 1998, 'teacher', false, 'blue'];
+// var john = ['John', 'Smith', 1998, 'teacher', false, 'blue'];
 // for (i = 0; i<john.length; i++) {
 //   if (typeof john[i] !== 'string' ) continue;
 //   console.log(john[i]);
@@ -120,6 +120,46 @@ var john = ['John', 'Smith', 1998, 'teacher', false, 'blue'];
 //   console.log(john[i]);
 // }
 
-for (i = john.length-1; i >= 0; i--) {
-  console.log(john[i]);
-}
+// for (i = john.length-1; i >= 0; i--) {
+//   console.log(john[i]);
+// }
+
+
+//CODE CHALLENGE LOOPS
+
+//.2 tip for under $50
+//.15 tip for 50-under $200
+//.10 tip for $200+
+
+//1. Create object with an array for bill values
+//2. Add method to calculate tip
+//3. This method should include a loop to iterate over all the bills and do the tip calculations
+//4. For output: create new array containing all tips & array containing total bills
+
+// var mark = {
+//   bills: [124, 48, 268, 180, 42],
+//   calcTip: function() {
+//     this.tips = [];
+//     this.totalBills = [];
+//
+//     for (var i = 0; i < this.bills.length; i++) {
+//       var percentage;
+//       var bill = this.bills[i];
+//
+//       if (bill < 50) {
+//         percentage = .2;
+//       } else if (bill >= 50 && bill <= 200 ){
+//         percentage = .15;
+//       } else {
+//         percentage = .10;
+//       }
+//
+//       this.tips[i] = bill * percentage;
+//       this.totalBills[i] = this.tips[i] + bill;
+//     }
+//   }
+// }
+//
+// mark.calcTip();
+//
+// console.log(mark);
